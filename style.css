@@ -13,7 +13,7 @@ body {
     margin-left: 32%;
     margin-top: 30vh;
     border-radius: 30px;
-    box-shadow: 0px 0px 20px 20px #eee;
+    box-shadow: 0 50px 100px -20px rgb(50 50 93 / 8%), 0 30px 60px -30px rgb(0 0 0 / 13%), 0 10px 20px -10px rgb(0 0 0 / 8%);
 }
 
 .messageContent {
@@ -27,7 +27,16 @@ body {
 }
 
 h1 {
-    font-weight: bolder;
+    line-height: 1em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-family: sans-serif;
+}
+
+p {
+    margin: 0.5em;
+    opacity: 0.7;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 900px) {
