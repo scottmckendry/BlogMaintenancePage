@@ -5,13 +5,13 @@
 # Runs after failover check for a given expected outage period and revert the changes after that period completes.
 
 # Variables:
-$domain = "scottmckendry.tech"
-$failover = "happy-bush-034054e1e.2.azurestaticapps.net"
-$revertAfterMins = 29
+$domain = ""
+$failover = ""
+$revertAfterMins = 19
 
 # Retrieve Azure Automation Account Credentials
 $cloudflareCredentials = Get-AutomationPSCredential -Name "Cloudflare"
-$zoneAndIpCredentials = Get-AutomationPSCredential -Name "ZoneAndIP"
+$zoneAndIpCredentials = Get-AutomationPSCredential -Name ""
 $cloudflareEmail = $cloudflareCredentials.Username
 $cloudflareApiKey = $cloudflareCredentials.GetNetworkCredential().Password
 $zone = $zoneAndIpCredentials.Username
