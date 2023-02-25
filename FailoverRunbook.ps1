@@ -93,7 +93,7 @@ foreach ($domain in $domains) {
             $body = $newCnameRecord | ConvertTo-Json
             $requestUrl = "https://api.cloudflare.com/client/v4/zones/$($zone)/dns_records"
             Invoke-WebRequest -Uri $requestUrl -Method Post -Headers $headers -Body $body -ContentType "application/json" | Out-Null
-            Write-Host "${$domain} expected outage time complete. Reverting DNS Changes"
+            Write-Host "$domain expected outage time complete. Reverting DNS Changes"
         }
         else {
             Write-Host "$domain within expected outage time. No change to DNS."
